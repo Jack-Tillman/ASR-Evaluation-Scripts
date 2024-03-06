@@ -2,11 +2,8 @@
 # 1) Replace commands for punctuation and line control with their appropriate replacements, i.e., [ comma ] => , [ new paragraph ] => \n\n 
 # 2) Remove all-capitalized words and replace with the first letter capitalized
 # 3) Convert 'Numeral one' to 1 and so on 
-# 4) Save the output as a .txt file labeled sequentially 
-# Potential improvements: 
-# 1) remove the spaces around colons :
-# 2) Replace command words that weren't transcribed as such (i.e., new paragraph rather than [ new paragraph ])
-# 3) Make sure headings are properly not all-caps 
+# 4) capitalize headers, though this functionality is only relevant for a few transcriptions
+# 5) Save the output as a .txt file labeled sequentially 
 
 import re
 
@@ -90,7 +87,9 @@ def save_output(output_text, file_prefix="cleaned-transcription"):
 # Sample input
 sample_input = """
  [
-["Two D echocardiogram dash two new paragraph comments, colon new paragraph, numeral one period. The left ventricular cavity size and wall thickness appear normal period. The wall motion and left ventricular systolic function appears hyperdynamic with estimated ejection fraction of 70% to 75% period. There is near cavity obliteration seen period. There also appears to be increased left ventricular outflow tract gradient at the mid cavity level. Comma consistent with hyperdynamic left ventricular systolic function period. There is abnormal left ventricular relaxation pattern, seen comma as well as comma elevated left atrial pressures seen by Doppler examination period. New paragraph, numeral two period, the left atrium appears mildly dilatated period. New line numeral three period, the right atrium and right ventricle appear normal period. New line numeral four period, the aortic root appears normal period. New line numeral five period. The aortic valve appears calcified with mild aortic valve stenosis comma calculated aortic valve area is 1.3 centimeter square comma with a maximum instantaneous gradient of 34 comma and a mean gradient of 19 millimeters period. New line numeral six period, there is mitral annular calcification extending to leaflets and supportive structures with thickening of mitral valve, leaflets and mild mitral regurgitation period. New line neuro seven period, the tricuspid valve appears normal with trace tricuspid regurgitation with moderate pulmonary artery hypertension period. Estimated pulmonary artery systolic pressure is 49 millimeters of mercury period. Estimated right atrial pressure of 10 millimeters of mercury period. New line numeral eight period. The pulmonary valve appears normal with trace pulmonary insufficiency period. New line numeral nine period, there is no pericardial effusion or intracardiac mass seen period. New line numeral 10 period. There is a color Doppler suggestive of a patent foramen ovale e with lipomatous hypertrophy of the interatrial septum period. New line numeral 11 period. The study was somewhat technically limited and hence subtle abnormalities could be missed from the study period."]
+[
+    "sample text here! :D"
+]
 ]
 """
 
